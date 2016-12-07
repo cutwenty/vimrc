@@ -1,0 +1,623 @@
+# html5
+snippet html5
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>${1}</title>
+  </head>
+  <body>
+    ${2}
+  </body>
+</html>
+endsnippet
+
+snippet viewport
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+endsnippet
+
+snippet favicon
+<link rel="shortcut icon" href="favicon.ico"/>
+endsnippet
+
+# ----------------------------------------------------
+# link
+snippet link
+<link rel="stylesheet" type="text/css" href="${1:css/style.css}"/>${2}
+endsnippet
+
+# style
+snippet style
+<style type="text/css">
+  ${1}
+</style>
+endsnippet
+
+#-----------------------------------------------------
+# script
+snippet script
+<script type="text/javascript">
+  ${1}
+</script>
+endsnippet
+
+# scriptsrc
+snippet scriptsrc
+<script type="text/javascript" src="${1:js/main.js}"></script>${2}
+endsnippet
+
+# ---------------------------------------------------
+# div
+snippet div
+<div>
+  ${1}
+</div>
+endsnippet
+
+# divc
+snippet divc
+<div class="${1:box}">
+  ${2}
+</div>
+endsnippet
+
+# divi
+snippet divi
+<div id="${1:dox}">
+  ${2}
+</div>
+endsnippet
+
+# ---------------------------------------------------
+# ul
+snippet ul
+<ul>
+  ${1}
+</ul>
+endsnippet
+
+snippet ulc
+<ul class="${1}">
+  ${2}
+</ul>
+endsnippet
+
+snippet uli
+<ul id="${1}">
+    ${2}
+</ul>
+endsnippet
+
+# li
+snippet li
+<li>${1}</li>
+endsnippet
+
+snippet lii
+<li id="${1}">${2}</li>
+endsnippet
+
+snippet lic
+<li class="${1}">${2}</li>
+endsnippet
+
+# ----------------------------------------------------
+# a
+snippet a
+<a href="${1:#}">${2}</a>
+endsnippet
+
+# ai
+snippet ai
+<a id="${1}" href="${2:#}">${3}</a>
+endsnippet
+
+# a
+snippet ac
+<a class="${1}" href="${2:#}">${3}</a>
+endsnippet
+
+snippet img
+<img src="${1}"/>
+endsnippet
+
+snippet imgi
+<img id="${1}" src="${2}"/>
+endsnippet
+
+snippet imgc
+<img class="${1}" src="${2}"/>
+endsnippet
+
+# ---------------------------------------------------
+snippet input
+<input type="${1:text}" value="${2}"/>
+endsnippet
+
+snippet inputi
+<input id="${1}" type="${2:text}" value="${3}"/>
+endsnippet
+
+snippet inputc
+<input class="${1}" type="${2:text}" value="${3}"/>
+endsnippet
+
+snippet label
+<label>${1}</label>
+endsnippet
+
+snippet labeli
+<label id="${1}">${2}</label>
+endsnippet
+
+snippet labelc
+<label class="${1}">${2}</label>
+endsnippet
+
+snippet textarea
+<textarea>${1}</textarea>
+# 文本标签
+endsnippet
+
+snippet p
+<p>
+  ${1}
+</p>
+endsnippet
+
+snippet pc
+<p class="${1}">
+  ${2}
+</p>
+endsnippet
+
+snippet pi
+<p id="${1}">
+  ${2}
+</p>
+endsnippet
+
+snippet h1
+<h1>${1}</h1>
+endsnippet
+
+snippet h2
+<h2>${1}</h2>
+endsnippet
+
+snippet h3
+<h3>${1}</h3>
+endsnippet
+
+snippet h4
+<h4>${1}</h4>
+endsnippet
+
+snippet h5
+<h5>${1}</h5>
+endsnippet
+
+snippet h6
+<h6>${1}</h6>
+endsnippet
+
+snippet span
+<span>${1}</span>
+endsnippet
+
+snippet spani
+<span id="${1}">${2}</span>
+endsnippet
+
+snippet spanc
+<span class="${1}">${2}</span>
+endsnippet
+
+snippet i
+<i>${1}</i>
+endsnippet
+
+snippet ii
+<i id="${1}">${2}</i>
+endsnippet
+
+snippet ic
+<i class="${1}">${2}</i>
+endsnippet
+
+# ----------------------------------------------------------------------------------
+# ionic 标签snippet
+# ionic
+snippet ionic
+<link rel="stylesheet" type="text/css" href="lib/ionic/css/ionic.css"/>
+<link rel="stylesheet" type="text/css" href="css/ionicons.min.css"/>
+<link rel="stylesheet" type="text/css" href="${1:css/style.css}"/>
+
+<script type="text/javascript" src="lib/ionic/js/ionic.bundle.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="${2:js/app.js}"></script>
+endsnippet
+
+# ion-header-bar
+snippet iheader
+<ion-header-bar class="${1:bar-stable}" align-title="${2:center}">
+<h1 class="title">${3:title}</h1>
+</ion-header-bar>
+endsnippet
+
+# ion-footer-bar
+snippet ifooter
+<ion-footer-bar class="${1:bar-stable}" align-title="${2:center}">
+  ${3}
+</ion-footer-bar>
+endsnippet
+
+# ion-content
+snippet icontent
+<ion-content has-bouncing="false">
+  ${1}
+</ion-content>
+endsnippet
+
+# ion-refresher
+snippet irefresher
+<ion-refresher pulling-text="${1:下拉刷新}" on-refresh="${2}">${3}</ion-refresher>
+endsnippet
+
+# ion-pane
+snippet ion-pane
+<ion-pane>
+  ${1}
+</ion-pane>
+endsnippet
+
+# ion-scroll
+snippet iscroll
+<ion-scroll zooming="true" min-zoom="0.5" max-zoom="3">
+  ${1}
+</ion-scroll>
+endsnippet
+
+# ion-infinite-scroll
+snippet iinfinite
+<ion-infinite-scroll on-infinite="${1}">${2}</ion-infinite-scroll>
+endsnippet
+
+# ion-tabs
+snippet itabs
+<ion-tabs class="${1:tabs-icon-top}">
+  ${2}
+</ion-tabs>
+endsnippet
+
+# ion-tab
+snippet itab
+<ion-tab title="${1}" href="${2:#}" icon-on="${3}" icon-off="${4}">${5}</ion-tab>
+endsnippet
+
+# ion-list
+snippet ilist
+<ion-list>
+  ${1}
+</ion-list>
+endsnippet
+
+# ion-item
+snippet iitem
+<ion-item>${1}</ion-item>
+endsnippet
+
+# ion-option-button
+snippet ioption
+<ion-option-button>${1}</ion-option-button>
+endsnippet
+
+# ion-delete-button
+snippet idelete
+<ion-delete-button>${1}</ion-delete-button>
+endsnippet
+
+# ion-reorder-button
+snippet ireorder
+<ion-reorder-button>${1}</ion-reorder-button>
+endsnippet
+
+# ion-side-menu
+snippet imenus
+<ion-side-menus>
+  ${1}
+</ion-side-menus>
+endsnippet
+
+# ion-side-menu left
+snippet imenuleft
+<ion-side-menu side="left" width="${1:275}">
+  ${2}
+</ion-side-menu>
+endsnippet
+
+# ion-side-menu right
+snippet imenuright
+<ion-side-menu side="right" width="${1:275}">
+  ${2}
+</ion-side-menu>
+endsnippet
+
+# ion-side-menu-content
+snippet imenucontent
+<ion-side-menu-content>
+  ${1}
+</ion-side-menu-content>
+endsnippet
+
+# ion-slide-box
+snippet islidebox
+<ion-slide-box auto-play="${1:true}" does-continue="${2:true}" slide-interval="${3:4000}" show-pager="${4:true}">
+  ${5}
+</ion-slide-box>
+endsnippet
+
+# ion-slide
+snippet islide
+<ion-slide>
+  ${1}
+</ion-slide>
+endsnippet
+
+# ion-checkbox
+snippet icheckbox
+<ion-checkbox ng-model="${1}">${2}</ion-checkbox>
+endsnippet
+
+# ion-radio
+snippet iradio
+<ion-radio ng-model="${1}" ng-value="${2}">${3}</ion-radio>
+endsnippet
+
+# ion-toggle
+snippet itoggle
+<ion-toggle ng-model="${1}" toggle-style="${2:toggle-balanced}">${3}</ion-toggle>
+endsnippet
+
+# ion-spinner
+snippet ispinner
+<ion-spinner icon="${1}"></ion-spinner>
+endsnippet
+
+# ion-nav-view
+snippet inavview
+<ion-nav-view>
+  ${1}
+</ion-nav-view>
+endsnippet
+
+# ion-nav-bar
+snippet inavbar
+<ion-nav-bar>${1}</ion-nav-bar>
+endsnippet
+
+# ion-view
+snippet iview
+<ion-view view-title="${1}">
+  ${2}
+</ion-view>
+endsnippet
+
+# ion-nav-back-button
+snippet inavback
+<ion-nav-back-button>${1}</ion-nav-back-button>
+endsnippet
+
+# ion-nav-buttons
+snippet inavbuttons
+<ion-nav-buttons side="${1}">
+  ${2}
+</ion-nav-buttons>
+endsnippet
+
+# ion-nav-title
+snippet inavtitle
+<ion-nav-title>
+  ${1}
+</ion-nav-title>
+endsnippet
+
+# script ng-template
+snippet itemplate
+<script id="${1}" type="text/ng-template">
+  ${2}
+</script>
+endsnippet
+
+# -----------------------------------------------
+
+## Some useful Unicode entities
+## Non-Breaking Space
+#snippet nbs
+#	&nbsp;
+## ←
+#snippet left
+#	&#x2190;
+## →
+#snippet right
+#	&#x2192;
+## ↑
+#snippet up
+#	&#x2191;
+## ↓
+#snippet down
+#	&#x2193;
+## ↩
+#snippet return
+#	&#x21A9;
+## ⇤
+#snippet backtab
+#	&#x21E4;
+## ⇥
+#snippet tab
+#	&#x21E5;
+## ⇧
+#snippet shift
+#	&#x21E7;
+## ⌃
+#snippet control
+#	&#x2303;
+## ⌅
+#snippet enter
+#	&#x2305;
+## ⌘
+#snippet command
+#	&#x2318;
+## ⌥
+#snippet option
+#	&#x2325;
+## ⌦
+#snippet delete
+#	&#x2326;
+## ⌫
+#snippet backspace
+#	&#x232B;
+## ⎋
+#snippet escape
+#	&#x238B;
+## Generic Doctype
+#snippet doctype HTML 4.01 Strict
+#	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+#	"http://www.w3.org/TR/html4/strict.dtd">
+#snippet doctype HTML 4.01 Transitional
+#	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+#	"http://www.w3.org/TR/html4/loose.dtd">
+#snippet doctype HTML 5
+#	<!DOCTYPE HTML>
+#snippet doctype XHTML 1.0 Frameset
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+#	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+#snippet doctype XHTML 1.0 Strict
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+#	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+#snippet doctype XHTML 1.0 Transitional
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+#	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+#snippet doctype XHTML 1.1
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+#	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+## HTML Doctype 4.01 Strict
+#snippet docts
+#	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+#	"http://www.w3.org/TR/html4/strict.dtd">
+## HTML Doctype 4.01 Transitional
+#snippet doct
+#	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+#	"http://www.w3.org/TR/html4/loose.dtd">
+## HTML Doctype 5
+#snippet doct5
+#	<!DOCTYPE HTML>
+## XHTML Doctype 1.0 Frameset
+#snippet docxf
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+#	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+## XHTML Doctype 1.0 Strict
+#snippet docxs
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+#	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+## XHTML Doctype 1.0 Transitional
+#snippet docxt
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+#	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+## XHTML Doctype 1.1
+#snippet docx
+#	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+#	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+#snippet html
+#	<html>
+#	${1}
+#	</html>
+#snippet xhtml
+#	<html xmlns="http://www.w3.org/1999/xhtml">
+#	${1}
+#	</html>
+#snippet body
+#	<body>
+#		${1}
+#	</body>
+#snippet head
+#	<head>
+#		<meta http-equiv="content-type" content="text/html; charset=utf-8"`Close()`>
+#
+#		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+#		${2}
+#	</head>
+#snippet title
+#	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>${2}
+#snippet script
+#	<script type="text/javascript" charset="utf-8">
+#		${1}
+#	</script>${2}
+##snippet scriptsrc
+##	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
+#snippet style
+#	<style type="text/css" media="${1:screen}">
+#		${2}
+#	</style>${3}
+#snippet base
+#	<base href="${1}" target="${2}"`Close()`>
+#snippet r
+#	<br`Close()[1:]`>
+#snippet div
+#	<div id="${1:name}">
+#		${2}
+#	</div>
+## Embed QT Movie
+#snippet movie
+#	<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+#	 codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+#		<param name="src" value="$1"`Close()`>
+#		<param name="controller" value="$4"`Close()`>
+#		<param name="autoplay" value="$5"`Close()`>
+#		<embed src="${1:movie.mov}"
+#			width="${2:320}" height="${3:240}"
+#			controller="${4:true}" autoplay="${5:true}"
+#			scale="tofit" cache="true"
+#			pluginspage="http://www.apple.com/quicktime/download/"
+#		`Close()[1:]`>
+#	</object>${6}
+#snippet fieldset
+#	<fieldset id="$1">
+#		<legend>${1:name}</legend>
+#
+#		${3}
+#	</fieldset>
+#snippet form
+#	<form action="${1:`Filename('$1_submit')`}" method="${2:get}" accept-charset="utf-8">
+#		${3}
+#
+#
+#	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
+#	</form>
+#snippet h1
+#	<h1 id="${1:heading}">${2:$1}</h1>
+#snippet input
+#	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
+#snippet label
+#	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}"`Close()`>${7}
+##snippet link
+##	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
+#snippet mailto
+#	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
+#snippet meta
+#	<meta name="${1:name}" content="${2:content}"`Close()`>${3}
+#snippet opt
+#	<option value="${1:option}">${2:$1}</option>${3}
+#snippet optt
+#	<option>${1:option}</option>${2}
+#snippet select
+#	<select name="${1:some_name}" id="${2:$1}">
+#		<option value="${3:option}">${4:$3}</option>
+#	</select>${5}
+#snippet table
+#	<table border="${1:0}">
+#		<tr><th>${2:Header}</th></tr>
+#		<tr><th>${3:Data}</th></tr>
+#	</table>${4}
+#snippet textarea
+#	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}

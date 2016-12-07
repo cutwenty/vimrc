@@ -1,0 +1,323 @@
+priority -30
+
+
+# 函数声明
+snippet funn "function"
+function ${1}(${2}) {
+  ${3}
+}
+endsnippet
+
+# 匿名函数
+snippet funa
+function(${1}) {
+  ${2}
+}
+endsnippet
+
+# 简写匿名
+snippet func
+(${1}) => {${2}}
+endsnippet
+
+# 控制台
+snippet log
+console.log(${1});${2}
+endsnippet
+
+# alert
+snippet alert
+alert(${1});${2}
+endsnippet
+
+# -----------------------------------------------------
+# timeout
+snippet timeout
+setTimeout(${1}, ${2});
+endsnippet
+
+# interval
+snippet interval
+setInterval(${1}, ${2});
+endsnippet
+
+snippet dm
+document
+endsnippet
+
+snippet re
+return ${1}
+endsnippet
+
+# write
+snippet dwrite
+document.write(${1});
+endsnippet
+
+# getElementById
+snippet dg
+document.getElementById(${1});
+endsnippet
+
+# querySelector
+snippet dq
+document.querySelector(${1});
+endsnippet
+
+snippet dqa
+document.querySelectorAll(${1});
+endsnippet
+
+snippet dgc
+document.getElementsByClassName(${1});
+endsnippet
+
+snippet dgt
+document.getElementsByTagName(${1});
+endsnippet
+
+snippet ae
+addEventListener(${1}, ${2});
+endsnippet
+
+snippet ree
+removeEventListener(${1}, ${2});
+endsnippet
+
+# ---------------------------------------------------
+# if
+snippet if
+if(${1}) {
+  ${2}
+}
+endsnippet
+
+# if else
+snippet ife
+if(${1}) {
+  ${2}
+}else {
+  ${3}
+}
+endsnippet
+
+# fori
+snippet fori
+for(var i = ${1:0}; i < ${2}; i++){
+  ${3}
+}
+endsnippet
+
+# forj
+snippet forj
+for(var j = ${1:0}; j < ${2}; j++){
+  ${3}
+}
+endsnippet
+
+# forin
+snippet forin
+for(var i in ${1:arr}){
+  ${2}
+}
+endsnippet
+
+# while
+snippet while
+while(${1}){
+  ${2}
+}
+endsnippet
+
+# switch
+snippet switch
+switch(${1}){
+  ${2}
+}
+endsnippet
+
+# case
+snippet case
+case ${1}:
+  ${2}
+  break;
+endsnippet
+
+# default
+snippet default
+default:
+    ${1}
+endsnippet
+
+# ---------------------------------------------------- 
+# 获取实时数据
+snippet getStyle
+function getStyle(obj, attr){
+  return obj.currentStyle? obj.currentStyle[attr]: getComputedStyle(obj)[attr];
+}
+endsnippet
+
+# ---------------------------------------------------
+
+
+
+
+# ---nodeJS-----------------------------------------
+snippet #! "shebang"
+#!/usr/bin/env node
+endsnippet
+
+snippet vreq "定义变量并获取模块"
+var ${0:${1/(.+\/)*(\w+)(-|\b|$)(\..+$)?/\u$2/g}} = require('${1}');
+endsnippet
+
+snippet ex "module.exports"
+module.exports = ${1};
+endsnippet
+
+snippet hcs "http.createServer"
+Http.createServer(${1}).listen(${2});
+endsnippet
+
+snippet ncs "net.createServer"
+Net.createServer(function(${1:socket}){
+  ${1}.on('data', function(${3:data}){
+    ${4}
+  });
+  ${1}.on('end', function(){
+    ${5}
+  });
+}).listen(${6:8124});
+endsnippet
+
+snippet pipe "pipe"
+pipe(${1:stream})${2}
+endsnippet
+
+# Express snippets
+
+snippet eget "express GET"
+${1:app}.get('${2}', ${3});
+endsnippet
+
+snippet epost "express POST"
+${1:app}.post('${2}', ${3});
+endsnippet
+
+snippet eput "express PUT"
+${1:app}.put('${2}', ${3});
+endsnippet
+
+snippet edelete "express DELETE"
+${1:app}.delete('${2}', ${3});
+endsnippet
+
+# process snippets
+
+snippet stdout "stdout"
+process.stdout
+endsnippet
+
+snippet stdin "stdin"
+process.stdin
+endsnippet
+
+snippet stderr "stderr"
+process.stderr
+endsnippet
+
+snippet dir "node格式化输出对象"
+console.dir(${1});
+endsnippet
+
+snippet time "node开始计时"
+console.time(${1});
+endsnippet
+
+snippet timeEnd "node结束计时"
+console.timeEnd(${1});
+endsnippet
+
+snippet trace "node返回函数调用栈"
+console.trace();
+endsnippet
+
+
+# —angularJS-----------------------------------------
+snippet iti "it (js, inject)" b
+it('${1:description}', inject(function($2) {
+	$0
+}));
+endsnippet
+
+snippet befi "before each (js, inject)" b
+beforeEach(inject(function($1) {
+  $0
+}));
+endsnippet
+
+snippet aconf "angular config" i
+config(function($1) {
+  $0
+});
+endsnippet
+
+snippet acont "angular controller" i
+controller('${1:name}', [${2}function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  $0
+}]);
+endsnippet
+
+snippet aconts "angular controller with scope" i
+controller('${1:name}', [${2:'$scope', }function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  $0
+}]);
+endsnippet
+
+snippet adir "angular directive" i
+directive('${1}', [${2}function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  return {
+    restrict: '${3:EA}',
+    link: function(scope, element, attrs) {
+      ${0}
+    }
+  };
+}]);
+endsnippet
+
+snippet adirs "angular directive with scope" i
+directive('${1}', [${2:'$scope', }function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  return {
+    restrict: '${3:EA}',
+    link: function(scope, element, attrs) {
+      ${0}
+    }
+  };
+}]);
+endsnippet
+
+snippet afact "angular factory" i
+factory('${1:name}', [${2}function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  $0
+}]);
+endsnippet
+
+snippet afacts "angular factory with scope" i
+factory('${1:name}', [${2:'$scope', }function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  $0
+}]);
+endsnippet
+
+snippet aserv "angular service" i
+service('${1:name}', [${2}function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  $0
+}]);
+endsnippet
+
+snippet aservs "angular service" i
+service('${1:name}', [${2:'$scope', }function(${2/('|")([A-Z_$]+)?\1?((, ?)$)?/$2(?3::$4)/ig}) {
+  $0
+}]);
+endsnippet
+
+
